@@ -52,6 +52,7 @@ fi
 
 # Install Python dependencies
 echo "📦 Installing Python dependencies..."
+poetry lock
 poetry install --all-extras --all-groups
 
 # Check if Node.js is available for optional dependencies
@@ -91,15 +92,3 @@ fi
 
 echo ""
 echo "🎉 Setup complete!"
-echo ""
-echo "Next steps:"
-echo "1. Activate the virtual environment: poetry shell"
-echo "2. Start the development server: python manage.py runserver"
-echo "3. Visit http://localhost:8000"
-echo ""
-echo "Optional:"
-echo "- Update .env file with your API keys"
-echo "- Create a superuser: python manage.py createsuperuser"
-echo "- Install Aider: python -m pip install aider-install && aider-install"
-echo ""
-echo "For AI tool configuration, see the README.md file."

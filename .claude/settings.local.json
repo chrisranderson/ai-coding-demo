@@ -13,6 +13,8 @@
   },
   "enableAllProjectMcpServers": true,
   "enabledMcpjsonServers": [
-    "git"
+    "git",
+    "electric-vehicle-data-server",
+    "time"
   ]
 }

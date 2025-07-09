@@ -2,7 +2,7 @@ import math
 import sys
 import urllib.request
 from pathlib import Path
-from typing import Dict, List
+from typing import Any, Dict, List
 
 import numpy as np
 import pandas as pd
@@ -21,8 +21,8 @@ def download_csv(url: str, destination: Path) -> None:
 if len(sys.argv) < 2:
     raise SystemExit("Usage: python ev_csv_server.py <path-to-csv>")
 
-csv_path = Path(
-    "/workspaces/ai-coding-demo/mcp/example_server/sample_data/Electric_Vehicle_Population_Data.csv")
+# Use relative path to the current directory instead of hardcoded /workspaces
+csv_path = Path(__file__).parent / "sample_data" / "Electric_Vehicle_Population_Data.csv"
 
 csv_url = "https://data.wa.gov/api/views/f6w7-q2d2/rows.csv?accessType=DOWNLOAD"
 
@@ -37,7 +37,7 @@ mcp = FastMCP("electric vehicle data server",
 
 
 @mcp.tool()
-def count_by(column: str) -> Dict[str, int]:
+def count_by(column: str) -> Dict[Any, int]:
     """Return ``{value: count}`` for *column* (top 100 to bound payload)."""
     _validate_column(column)
     counts = df[column].value_counts()
