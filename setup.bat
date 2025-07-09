@@ -34,7 +34,7 @@ if errorlevel 1 (
     curl -sSL https://install.python-poetry.org | python -
     
     REM Add Poetry to PATH for current session
-    set PATH=%APPDATA%\Python\Scripts;%PATH%
+    set "PATH=%APPDATA%\Python\Scripts;%PATH%"
     
     echo Poetry installed
     echo You may need to restart your command prompt for Poetry to be available in new sessions.
