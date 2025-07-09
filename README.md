@@ -123,8 +123,10 @@ You can then see a sample web app at [localhost:8000](http://localhost:8000).
 ### Start the Development Server
 ```bash
 # Activate the virtual environment (if not already activated)
-poetry shell
-poetry install --all-groups
+
+# Windows: Invoke-Expression (poetry env activate)
+eval $(poetry env activate)
+poetry install
 # Launch Django development server
 python manage.py runserver
 ```
