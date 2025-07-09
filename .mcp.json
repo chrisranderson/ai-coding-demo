@@ -1,0 +1,29 @@
+{
+  "mcpServers": {
+    "git": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "mcp-server-git"
+      ],
+      "env": {}
+    },
+    "electric-vehicle-data-server": {
+      "type": "stdio",
+      "command": "/workspaces/ai-coding-demo/.venv/bin/mcp",
+      "args": [
+        "run",
+        "/workspaces/ai-coding-demo/mcp/example_server/electric_vehicle_data_server.py"
+      ],
+      "env": {}
+    },
+    "time": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "mcp-server-time"
+      ],
+      "env": {}
+    }
+  }
+}

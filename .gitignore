@@ -1,0 +1,6 @@
+*.pyc
+*.sqlite3
+mcp/accessible-data
+*.csv
+.env
+.aider*

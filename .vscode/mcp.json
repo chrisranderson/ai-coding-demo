@@ -1,0 +1,53 @@
+{
+    "inputs": [
+        {
+            "type": "promptString",
+            "id": "db_path",
+            "description": "SQLite Database Path",
+            "default": "${workspaceFolder}/db.sqlite3"
+        }
+    ],
+    "servers": {
+        "git": {
+            "command": "uvx",
+            "args": [
+                "mcp-server-git"
+            ]
+        },
+        "electric-vehicle-data-server": {
+            "command": "${workspaceFolder}/.venv/bin/mcp",
+            "args": [
+                "run",
+                "${workspaceFolder}/mcp/example_server/electric_vehicle_data_server.py",
+            ]
+        },
+        "time": {
+            "command": "uvx",
+            "args": [
+                "mcp-server-time"
+            ]
+        },
+        "memory": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-memory"
+            ]
+        },
+        "sequential-thinking": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-sequential-thinking"
+            ]
+        },
+        "sqlite": {
+            "command": "uvx",
+            "args": [
+                "mcp-server-sqlite",
+                "--db-path",
+                "${input:db_path}"
+            ]
+        }
+    }
+}
