@@ -93,11 +93,20 @@ You can then see a sample web app at [localhost:8000](http://localhost:8000).
    ```
 
 ### Cline
-1. In VS Code -> left bar -> extensions -> Install the **Cline** VS Code extension
-2. Your instructor will provide:
-   - Base URL
-   - API Key  
-   - Model ID
+- In VS Code -> left bar -> extensions -> Install the **Cline** VS Code extension
+- Click on the little robot face on the left-hand side (or press `ctrl/cmd + '`)
+- At the bottom in the middle of the Cline side panel, you'll see something like `openrouter:anthropic/claude-sonnet-4`. Click on that to configure Cline.
+- Settings:
+   - API Provider: OpenAI Compatible
+   - Your instructor will provide:
+      - Base URL
+      - API Key  
+      - Model ID
+- **Windows users**:
+   - Press `ctrl+shift+P`
+   - Search for "Terminal: Select Default Profile" and pick Powershell
+- To add MCP servers, see "Manage MCP Servers" (one of the icons on the bottom of the side panel)
+
 
 ### Aider
 1. Already installed? Great! Otherwise see the [Aider docs](https://aider.chat/docs/install.html#get-started-quickly-with-aider-install)
