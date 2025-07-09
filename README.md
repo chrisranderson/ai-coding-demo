@@ -42,8 +42,9 @@ chmod +x setup.sh
 ```
 
 **Windows:**
+Run this from the repo root:
 ```cmd
-setup.bat
+.\setup.bat
 ```
 
 The setup scripts will automatically:
