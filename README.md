@@ -57,8 +57,10 @@ The setup scripts will automatically:
 
 ### 3. Start Development Server
 ```bash
+
 # Activate the virtual environment
-poetry shell
+# Windows: Invoke-Expression (poetry env activate)
+eval $(poetry env activate)
 
 # Launch Django development server
 python manage.py runserver
@@ -210,7 +212,6 @@ Refer to the example server in `mcp/example_server/` for guidance on creating cu
 
 - Verify Python version: `python --version` *(should be 3.11+)*
 - Poetry not found? Restart terminal or add to PATH
-- Always use `poetry shell` before running Django commands
 </details>
 
 <details>
