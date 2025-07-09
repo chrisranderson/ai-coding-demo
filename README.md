@@ -5,7 +5,7 @@
 
 ## AI Agents for Software Development Workshop
 
-An interactive hands-on demonstration of cutting-edge AI coding tools including GitHub Copilot, Claude Code, Cline, and Aider, showcasing Model Context Protocol (MCP) servers and modern AI-assisted development workflows.
+An interactive demonstration of cutting-edge AI coding tools including GitHub Copilot, Claude Code, Cline, and Aider, showcasing Model Context Protocol (MCP) servers and modern AI-assisted development workflows.
 
 
 ## Prerequisites
@@ -109,9 +109,8 @@ You can then see a sample web app at [localhost:8000](http://localhost:8000).
 
 
 ### Aider
-1. Already installed? Great! Otherwise see the [Aider docs](https://aider.chat/docs/install.html#get-started-quickly-with-aider-install)
-2. Your instructor will provide environment variables
-3. Start in architect mode:
+1. Install Aider: [Aider docs](https://aider.chat/docs/install.html#get-started-quickly-with-aider-install)
+2. Start in architect mode:
    ```bash
    source .env && aider --architect
    ```

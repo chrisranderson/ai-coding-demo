@@ -3,7 +3,7 @@
 # EMSL 2025 Summer School: AI Coding Demo Setup Script (Unix/Linux/macOS)
 # This script sets up the development environment for the AI coding demo
 
-set -e  # Exit on any error
+set -euxo pipefail  # Exit on any error
 
 echo "🚀 Setting up AI Coding Demo environment..."
 
@@ -89,6 +89,8 @@ if [ ! -f .env ] && [ -f .env.example ]; then
     chmod 600 .env
     echo "✅ .env file created. Please update it with your API keys."
 fi
+
+python -m pip install aider-install && aider-install
 
 echo ""
 echo "🎉 Setup complete!"
